@@ -1,0 +1,9 @@
+
+<app-shopping-edit></app-shopping-edit>
+<div class="container">
+    <div fxLayout="row" fxLayoutAlign="space-around start" *ngFor="let ingredient of ingredients"  style="border:1px solid black">
+        <div class="blocks">{{ingredient.name}}</div>
+        <div class="blocks">{{ingredient.amount}}</div>
+        
+      </div>
+</div>

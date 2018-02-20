@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-xs-12">
+    <button class="btn btn-success">New Recipe</button>
+  </div>
+</div>
+
+<div class="container" style="border:1px black solid;">
+ 
+    <div *ngFor="let recipe of recipes"  fxLayout="row" fxLayoutAlign="start end" class="content">
+      <div fxFlex = "16%" style="border:1px black solid;">
+        <div fxLayout="column">
+          <h4 class="blocks">{{recipe.name}}</h4>
+          <p class="blocks">{{recipe.description}}</p>
+        </div>
+    </div>
+      <div fxFlex = "24%" fxLayoutAlign="center" style="border:1px black solid;">
+        <img src="{{recipe.imagePath}}" 
+             alt="{{recipe.name}}" 
+             style="max-height: 50px;">
+      </div>
+    </div>
+    <app-recipe-item></app-recipe-item>
+  
+</div>
+
+
+
